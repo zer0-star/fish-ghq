@@ -18,5 +18,6 @@ function __ghq_repository_search -d 'Repository search'
             printf "\nERROR: plugin-ghq is not support '$selector'.\n"
     end
     [ -n "$select" ]; and cd (ghq root)"/$select"
-    commandline -f repaint
+    commandline ''
+    commandline -f execute
 end
